@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Transações de {{datas}}</title>
+    <meta name="author" content="Caio Vitale Barbosa">
+    <meta name="generator" content="HTML generator">
+    <meta name="keywords" content="HTML, CSS, PDF, Relatório, Transações">
+    <meta name="dcterms.created" content="{{hoje}}">
+    <meta name="dcterms.modified" content="2025-03-31">
+    <meta name="description" content="Descrição simples">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2 style="text-align: left;">Caio Vitale - Light Instruments</h2>
+    <h1>{{datas}}</h1>
+    <p class="date-range" style="text-align: center;">de {{data_inicial}} até {{data_final}}</p>
+
+    <table class="validation-table">
+        <tbody>
+            <tr style="height: 18pt;">
+                <td>
+                    <p style="text-align: center;">Validação do empregado</p>
+                </td>
+                <td>
+                    <p style="text-align: center;">Validação do gerente</p>
+                </td>
+                <td>
+                    <p style="text-align: center;">Validação da contabilidade</p>
+                </td>
+            </tr>
+            <tr style="height: 60pt;">
+                <td>
+                    <p style="text-align: left;">Data</p>
+                    <p style="text-align: left;">Assinatura</p>
+                </td>
+                <td>
+                    <p style="text-align: left;">Data</p>
+                    <p style="text-align: left;">Assinatura</p>
+                </td>
+                <td>
+                    <p style="text-align: left;">Data</p>
+                    <p style="text-align: left;">Assinatura</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Detalhes das Despesas</h2>
+    <table>
+        <thead>
+            <tr>
+                {% for column in columns %}
+                    <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for cell in row %}
+                        <td>{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+        <thead>
+            <tr>
+                <th colspan="3">Total</th>
+                <th style="text-align: right;">{{total}}</th>
+            </tr>
+        </thead>
+    </table>
+
+    <div class="page-break"></div> <!-- Quebra de página antes da seção de imagens -->
+
+    <h2>Resumo por Categoria</h2>
+    <table>
+        <thead>
+            <tr>
+                {% for column in columns_a %}
+                    <th>{{ column }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data_a %}
+                <tr>
+                    {% for cell in row %}
+                        <td>{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="page-break"></div> <!-- Quebra de página antes da seção de imagens -->
+    
+    <div class="image-grid">
+        {% for image_name, image in zip(images_names, images) %}
+            <div class="image-item">
+                <p class="image-label">{{ image_name }}</p>
+                <img src="file:///{{ image }}" alt="Imagem">
+            </div>
+        {% endfor %}
+    </div>
+    
+</body>
+</html>
