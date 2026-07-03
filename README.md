@@ -33,7 +33,6 @@ OneDrive/Documentos/Trabalho/Despesas/
 ├── 25-02-Fevereiro/                 # Pasta e subpastas para mês seguinte criadas pelo notebook
 │   └── NF/
 │   └── Uber/
-│   └── Fatura_Fevereiro.xlsx
 └── Internacional/                   # Despesas internacionais
     └── 25-01-Jan/
         └── NF/
