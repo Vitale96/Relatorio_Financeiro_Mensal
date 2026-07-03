@@ -105,6 +105,16 @@
                 <img src="file:///{{ image }}" alt="Imagem">
             </div>
         {% endfor %}
+        <!-- {% for image_name, image in zip(images_names, images) %}
+            {% if loop.index0 % 4 == 0 and not loop.first %}
+                <div class="page-break"></div>
+            {% endif %}
+
+            <div class="image-item">
+                <p class="image-label">{{ image_name }}</p>
+                <img src="file:///{{ image }}" alt="Imagem">
+            </div>
+        {% endfor %} -->
     </div>
     
 </body>

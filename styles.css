@@ -88,12 +88,15 @@ tbody tr:nth-child(even) {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+  /* flex-wrap: wrap; */
 }
 .image-item {
-  /* width: 48%; Mantém 2 imagens por linha */
   text-align: center;
   margin-bottom: 20px;
   /* align-items: center; */
+  /* width: 48%; */
+  /* margin: 1%; */
+  page-break-inside: avoid;
 }
 img {
   max-width: 90mm;
