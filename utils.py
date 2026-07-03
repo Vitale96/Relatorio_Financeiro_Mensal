@@ -13,6 +13,7 @@ from openpyxl.styles import NamedStyle
 from openpyxl.utils import get_column_letter
 
 CATEGORIAS = {
+    "Assinatura Uber": ["one membership"],
     "Uber": ["uber"],
     "Estacionamento": ["park", "estacionamento"],
     "Posto": ["posto", "shell", "ipiranga"],
@@ -54,6 +55,7 @@ class FinanceiroProcessor:
     def _setup_dirs(self):
         if not self.pasta_mes.exists():
             (self.pasta_mes / "NF").mkdir(parents=True)
+            (self.pasta_mes / "Uber").mkdir(parents=True)
             logging.info(f"Pasta {self.pasta_mes} criada!")
         else:
             logging.info(f"Pasta {self.pasta_mes} já existe.")
