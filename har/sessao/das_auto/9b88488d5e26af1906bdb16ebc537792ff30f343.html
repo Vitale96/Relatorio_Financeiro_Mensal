@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PGDAS-D 2018</title>
+    <link href="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/Content/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/Content/css/bootstrap-nav-wizard.css" rel="stylesheet" />
+    <link href="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/Content/css/smoke.css" rel="stylesheet">
+    <link href="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/Content/css/sinac-base.css" rel="stylesheet">
+    <link href="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/Content/css/pgdasd.css" rel="stylesheet">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body style="padding: 0px 0px 0px 0px !important;">
+    <div class="wrapper" style="width:99%;">
+        <nav class="navbar" style="background-color:#FAFAFA; border-bottom-color: #EAEAEA;">
+    <div class="container" style="width: 100%;">
+        <div class="navbar-header" style="width: 100%;">
+            <a class="navbar-brand" href="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/" style="width:50px; margin-top: 2px;"><img src="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/Content/img/logo-simples.png" alt="Logo Simples Nacional"/></a>
+            <a class="navbar-brand" href="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/" style="font-weight: bold; color: #66825E; margin-top:7px;">
+                <span style="font-size:20px;">PGDAS-D 2018</span>
+            </a>
+            <ul class="nav navbar-nav navbar-right pull-right" style="margin-top: 9px;">
+                <li style="display: inline">
+                    <a href="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/sair" class="navbar-popover" data-content="Sair" style="display: inline; color:#a1a1a1; font-size:18px;"><span class="glyphicon glyphicon-off" style="font-size:18px;"></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+        <div class="container-fluid" style="padding: 0px 7px 0px 7px !important;">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <noscript>
+                        <div class="alert alert-danger alert-dismissible" role="alert" style="width:60%; margin: 0 auto;">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+                            <strong>ERRO!</strong> O seu browser está com o Javascript desabilitado. A aplicação não funcionará adequadamente.
+                        </div>
+                    </noscript>
+                    <!-- Conteúdo aqui -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="container" style="width: 98%; padding-bottom: 80px;">
+                                
+
+<h3 class="title"><span class="glyphicon glyphicon-chevron-right"></span> Entrada - Captcha</h3>
+<form class="col-md-12" method="post" action="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/Captcha/ProcessarCaptcha">
+        <div class="alert alert-danger">Impedido por prote&#231;&#227;o Captcha. Comportamento de Rob&#244; bloqueado no per&#237;odo de 08:00 &#224;s 18:00.</div>
+    <div>
+        Clique abaixo para prosseguir.
+    </div>
+    <hr />
+    <div class="h-captcha" 
+         data-sitekey="38604819-bb1e-4105-b3bf-49c1ffdf9475"
+         data-callback="onCaptchaClick">
+    </div>
+    <button type="submit" id="bntSubmit" class="btn btn-success btn-sm" disabled>
+        <span class="glyphicon glyphicon-save" aria-hidden="true"></span> Prosseguir
+    </button>
+    <input name="__RequestVerificationToken" type="hidden" value="MzG6CMXfltmH61QvXfldCgQCThKhKarQk_u01VMfx7N7ZlMzmiZdt9H_iAa9eq1CSgmZxwOKJ7c7dbIhHnnm7Ewcr4GZm87UuYjUkF1LT801" />
+
+</form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim conteúdo -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .wrapper -->
+    <input type="hidden" id="rootPath" value="https://www8.receita.fazenda.gov.br//SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/" />
+<script src="/SimplesNacional/Aplicacoes/ATSPO/pgdasd2018.app/js?v=MJ0t97910R2pEAjvBXKmevCAm9vozEkbOoIfjWBhXdA1"></script>
+        <script>
+            function onCaptchaClick(response) {
+                $("#bntSubmit").prop('disabled', false);
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+/* 
+    Estilos para sticky footer
+    A técnica "sticky footer" consiste de um rodapé que fica fixo embaixo quando não houver conteúdo na página.
+    Se houver conteúdo, o rodapé acompanha o fluxo dos elementos (como position:relative), sem sobre posição.
+ */
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -20px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+	height: 20px; /* '.push' must be the same height as 'footer' */
+}
+/* end sticky footer */
+/*
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+
+*/
+
+/* Menu lateral */
+.title-menu {
+    cursor: pointer;
+    color: #0A4C62 !important;
+    background-color: #def0c1 !important;
+    border-color: #def0c1 !important;
+}
+.div-menu {
+    padding:0px;
+}
+.item-menu {
+    cursor: pointer;
+    padding-left: 15px;
+}
+.item-menu:hover {
+    cursor: pointer;
+    /*padding-left: 15px;*/
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+.item-menu.active {
+    background-color: #eeeeee !important;
+    font-weight: bolder;
+}
+.table-menu {
+    margin-bottom: 0px;
+}
+.glyphicon-menu {
+    margin-right:10px;
+}
+.text-menu {
+    color: #0A4C62;
+}
+.text-menu:hover, .text-menu:active, .text-menu:visited, .text-menu:focus {
+    text-decoration: none;
+}
+.text-title-menu:hover, .text-title-menu:active, .text-title-menu:visited, .text-title-menu:focus {
+    text-decoration: none;
+}
+
+
+.table-contribuinte {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.mensagem-inicial {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.mensagem-inicial p {
+    color: #0A4C62;
+    font-size: 12px;
+}
+
+.form-ano-calendario {
+    margin-top: 20px;
+}
+
+.consulta-emissao, .consulta-extrato {
+    text-align: center;
+}
+
+/* Tabela */
+
+table.trabalhar td {
+    font-size: 11px;
+}
+
+
+table.consulta {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+table.consulta th.pa {
+    vertical-align:middle !important; 
+    text-align: left; 
+    padding: 4px !important; 
+    border: 2px solid white;
+    color: #0A4C62;
+}
+
+table.consulta th.header {
+    vertical-align:middle !important; 
+    text-align: center; 
+    padding: 4px !important; 
+    border: 1px solid white;
+    color: #0A4C62;
+}
+
+table.consulta td.header 
+{
+    color: #555555;
+    padding: 1px;
+    font-weight:bold;
+    font-size: 10px !important;
+    text-align:center;
+}
+
+table.emissao th.detalhe 
+{
+    padding: 0px !important;
+    width: 1%; /* !important;*/
+    border: 1px solid #99BBE8 !important;
+    background-color: #D6E3F2;
+    cursor: pointer;
+}
+
+table.emissao th.check {
+    width: 2%;
+}
+
+table.emissao th.periodo {
+    width: 20%;
+}
+
+table.emissao th.apurado {
+    width: 8%;
+}
+
+table.emissao th.situacao, table.emissao th.beneficio {
+    width: 10%;
+}
+
+table.emissao th.resumo {
+    width: 45%;
+}
+
+table.emissao th.principal, table.emissao th.multa, table.emissao th.juros, table.emissao th.total  {
+    width: 9%;
+    white-space: nowrap;
+}
+
+table.emissao td {
+    padding: 2px !important;
+    padding-left: 6px !important;
+    vertical-align: middle !important;
+}
+
+table.emissao td.pa {
+    font-weight: bold;
+    color:#0A4C62; 
+}
+
+table.emissao td.selecionar, table.emissao td.beneficio {
+    text-align: center;
+}
+
+table.emissao td.checkall {
+    color:#0A4C62; 
+    /*padding-top: 4px;*/
+    border: 0px !important;
+}
+
+table.emissao td.simnao a
+{
+    font-size: 12px;
+    text-decoration: underline;
+    color: #0A4C62;
+}
+
+table.emissao td.situacaoPa 
+{
+    font-weight: bold;
+    color:#0A4C62; 
+}
+
+table.emissao td.pago, table.emissao td.pago a
+{
+    color: #1caa12;
+}
+
+table.emissao td.devedor
+{
+    color: #FF0000;
+}
+
+/*  Detalhes do DAS pago */
+
+div.modal-body p span:first-child 
+{
+    font-weight: bold;
+    color: #0A4C62;
+}
+
+/* Campos Atualizar Guia de Pagamento */
+
+.atualizarguia-datapagto, .atualizarguia-ano {
+    width: auto !important;
+    height: auto !important;
+    padding: 1px;
+    font-family: Verdana, Arial, Helvetica, sans-serif !important;
+    font-size: 11px !important;
+    color: #000000;
+    border: 1px solid #0A4C62;
+    -moz-border-radius: unset !important;
+    -webkit-border-radius: unset !important;
+    border-radius: unset !important;
+}
+
+.atualizarguia-datapagto {
+    width: 85px !important;
+}
+
+label.atualizarguia {
+    padding: 0px !important;
+    color: #0A4C62;
+}
+
+.table>thead>tr>td.resumo-head, 
+.table>tbody>tr>td.resumo-head, 
+.table>tfoot>tr>td.resumo-head, 
+.table>thead>tr>th.resumo-head, 
+.table>tbody>tr>th.resumo-head, 
+.table>tfoot>tr>th.resumo-head, 
+.table>thead>tr.active>td, 
+.table>tbody>tr.active>td, 
+.table>tfoot>tr.active>td, 
+.table>thead>tr.active>th, 
+.table>tbody>tr.active>th, 
+.table>tfoot>tr.active>th {
+    padding:4px; 
+    line-height: 1.2;
+    background-color: #f0f0f0;
+}
+
+.table>thead>tr>th.resumo-line, 
+.table>tbody>tr>th.resumo-line, 
+.table>tfoot>tr>th.resumo-line, 
+.table>thead>tr>td.resumo-line, 
+.table>tbody>tr>td.resumo-line, 
+.table>tfoot>tr>td.resumo-line {
+    padding:4px; 
+    line-height: 1.2;
+}
+
+/* Estados dos elementos */
+
+.is-checked
+{
+    background-color: #ffe99b;
+}
+
+@media screen and (max-width: 1024px) {
+    .is-basic {
+        width: 85%;
+    }
+
+    .is-detailed {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+    .is-basic {
+        width: 60%;
+    }
+
+    .is-detailed {
+        width: 80%;
+    }
+}
