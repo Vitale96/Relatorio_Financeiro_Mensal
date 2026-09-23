@@ -81,7 +81,8 @@ tbody tr:nth-child(even) {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2mm;
-  height: 257mm; /* Altura da página A4 menos margens (aprox.) */
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 .image-grid div {
   display: flex;

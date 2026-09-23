@@ -61,15 +61,18 @@
             {% for row in data %}
                 <tr>
                     {% for cell in row %}
-                        <td>{{ cell }}</td>
+                        <td>{{ cell if cell is not none and cell == cell else '' }}</td>
                     {% endfor %}
                 </tr>
             {% endfor %}
         </tbody>
         <thead>
             <tr>
-                <th colspan="3">Total</th>
-                <th style="text-align: right;">{{total}}</th>
+                <th colspan="{{ columns.index('Valor') }}">Total</th>
+                <th style="text-align: right;">{{ total }}</th>
+                {% if columns.index('Valor') + 1 < columns|length %}
+                <th colspan="{{ columns|length - columns.index('Valor') - 1 }}"></th>
+                {% endif %}
             </tr>
         </thead>
     </table>
@@ -89,7 +92,7 @@
             {% for row in data_a %}
                 <tr>
                     {% for cell in row %}
-                        <td>{{ cell }}</td>
+                        <td>{{ cell if cell is not none and cell == cell else '' }}</td>
                     {% endfor %}
                 </tr>
             {% endfor %}
@@ -98,24 +101,19 @@
 
     <div class="page-break"></div> <!-- Quebra de página antes da seção de imagens -->
     
-    <div class="image-grid">
-        {% for image_name, image in zip(images_names, images) %}
-            <div class="image-item">
-                <p class="image-label">{{ image_name }}</p>
-                <img src="file:///{{ image }}" alt="Imagem">
-            </div>
-        {% endfor %}
-        <!-- {% for image_name, image in zip(images_names, images) %}
-            {% if loop.index0 % 4 == 0 and not loop.first %}
-                <div class="page-break"></div>
-            {% endif %}
-
-            <div class="image-item">
-                <p class="image-label">{{ image_name }}</p>
-                <img src="file:///{{ image }}" alt="Imagem">
-            </div>
-        {% endfor %} -->
-    </div>
+    {% for group in range(0, images|length, 4) %}
+        {% if not loop.first %}
+        <div class="page-break"></div>
+        {% endif %}
+        <div class="image-grid">
+            {% for image_name, image in zip(images_names[group:group + 4], images[group:group + 4]) %}
+                <div class="image-item">
+                    <p class="image-label">{{ image_name }}</p>
+                    <img src="file:///{{ image }}" alt="Imagem">
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
     
 </body>
 </html>

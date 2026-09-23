@@ -1,0 +1,1229 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1">
+    <noscript>
+      <meta http-equiv="Refresh" content="0; url=/NoScript.aspx" />
+    </noscript>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /><title>
+	Nota Fiscal Eletrônica
+</title><script type="text/javascript" src="/ruxitagentjs_ICA7NVfghqrux_10345260810170330.js" data-dtconfig="rid=RID_-466533099|rpid=-831344744|domain=prefeitura.sp.gov.br|reportUrl=/rb_bf25627nfc|app=db66c4a801656e04|owasp=1|featureHash=ICA7NVfghqrux|srsr=10000|rdnt=1|uxrgce=1|cuc=1kl9mogn|mel=100000|dpvc=1|md=mdcc1=a.saudacao|lastModification=1790105512048|tp=500,50,0|srbbv=2|agentUri=/ruxitagentjs_ICA7NVfghqrux_10345260810170330.js"></script><link rel="stylesheet" type="text/css" href="../nfe.css?v=1.1" /><link rel="stylesheet" type="text/css" href="../portal/css/ndefault.css" /><link rel="stylesheet" type="text/css" href="../portal/css/nbarra.css" /><link rel="stylesheet" type="text/css" href="../portal/css/menu.css?v=1.1" /><link rel="stylesheet" type="text/css" href="../webparts/padrao.css?v=1.1" /><link rel="stylesheet" type="text/css" href="../webparts/shared/login/css/wplogin.css?v=1.1" /><link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet" type="text/css" />
+    <link href="../thickbox.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/Modal.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src="../portal/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../portal/jquery/limit/jquery.limit.js"></script>
+    <script type="text/javascript" src="../janelas.js"></script>
+    <script type="text/javascript" src="../funcoes.js"></script>
+    <style type="text/css">
+        td {
+            text-align: left;
+        }
+
+        label, input[type="radio"], input[type="checkbox"] {
+            vertical-align: middle;
+        }
+
+        .tcenter td {
+            text-align: center;
+        }
+
+        .avisoMEI {
+            text-align: center;
+            background-color: #fff3cd;
+            border-color: #ffeeba;
+            border-radius: 5px;
+            color: #856404;
+            padding: 20px;
+            margin: 10px;
+            line-height: 25px;
+            font-size: 12px;
+        }
+
+        .col-data,
+        .col-versao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+        }
+        /* Container dos radios */
+        .radio-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .radio-row {
+            display: flex;
+            align-items: center;
+            gap: 6px; /* espaçamento entre radio e label */
+        }
+    </style>
+<link rel="stylesheet" type="text/css" href="https://cav.prefeitura.sp.gov.br/cdn/cav-vue@0.0.1/style.css?k=a64bdbb212c047768144dfac69b72f33"/><link rel="stylesheet" type="text/css" href="/shared/NotificationBell.css?k=c2c7dafc662345e6b9c60826086c2b4a"/><link rel="stylesheet" type="text/css" href="/shared/oauth2logout.css"/><link rel="stylesheet" type="text/css" href="/shared/headerv2.css"/><style type="text/css">
+	.ctl00_wpMenuLateral_mnuRotinas_0 { background-color:white;visibility:hidden;display:none;position:absolute;left:0px;top:0px; }
+	.ctl00_wpMenuLateral_mnuRotinas_1 { text-decoration:none; }
+	.ctl00_wpMenuLateral_mnuRotinas_2 {  }
+	.ctl00_wpMenuLateral_mnuRotinas_3 { border-style:none; }
+	.ctl00_wpMenuLateral_mnuRotinas_4 {  }
+	.ctl00_wpMenuLateral_mnuRotinas_5 { border-style:none; }
+	.ctl00_wpMenuLateral_mnuRotinas_6 {  }
+	.ctl00_wpMenuLateral_mnuRotinas_7 {  }
+	.ctl00_wpMenuLateral_mnuRotinas_8 { border-style:none; }
+	.ctl00_wpMenuLateral_mnuRotinas_9 {  }
+	.ctl00_wpMenuLateral_mnuRotinas_10 { border-style:none; }
+	.ctl00_wpMenuLateral_mnuRotinas_11 {  }
+
+</style></head>
+<body>
+    
+
+<header class="header-v2">
+    <div class="header-v2__container">
+        <div class="header-v2__logo">
+            
+            <img src="/assets/img/logo-nfe.png" alt="logo-nfe"/>
+        </div>
+        <div class="header-v2__version">
+            <p>
+                202609171334
+            </p>
+        </div>
+        <div class="header-v2__login">
+            
+<div class="cav-container">
+    <div id="cav"></div>
+</div>
+
+            
+            
+
+<div class="oauth-logout  oauth--light oauth--medium">
+    <div class="oauth-identifier">
+        <div class="oauth-name">47.654.754/0001-29</div>
+        <div class="oauth-date" title="Data do seu último acesso.">Acessou em 21/08/2026 13:20</div>
+    </div>
+    <button onclick="__doPostBack('ctl00$HeaderV2$oauthLogout$Sair','')" id="ctl00_HeaderV2_oauthLogout_Sair" class="oauth-sair" title="Clique para sair do sistema">
+        <i class="oauth-icon">
+            
+            
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_1_7" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">
+                    <rect width="32" height="32" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_1_7)">
+                    <path d="M6.66667 28C5.93333 28 5.30556 27.7389 4.78333 27.2167C4.26111 26.6944 4 26.0667 4 25.3333V6.66667C4 5.93333 4.26111 5.30556 4.78333 4.78333C5.30556 4.26111 5.93333 4 6.66667 4H16V6.66667H6.66667V25.3333H16V28H6.66667ZM21.3333 22.6667L19.5 20.7333L22.9 17.3333H12V14.6667H22.9L19.5 11.2667L21.3333 9.33333L28 16L21.3333 22.6667Z" fill="#012759"/>
+                </g>
+            </svg>
+        </i>
+        <span>Sair</span>
+    </button>
+</div>
+
+        </div>
+    </div>
+</header>
+
+    <div class="pagina-mestre">
+        <form name="aspnetForm" method="post" action="./nota.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm" style="margin: 0px; padding: 0px;">
+<div>
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZL9rIEJafzBxggga0IwZZdaBAsnnvG_X6J3VgjQCxxtzozKPcw2&amp;t=638259254771233176" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+function CallServer(arg, context) {WebForm_DoCallback('__Page',arg,fillFieldsByCEP,context,null,false); }//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=6qyDOaOZyslxHkxXsb2KVVQY3pW5-X_kTKHchpzM28Dy68KPC-aOYSUvd-achDmog4ENLnAsA_EVDDoIXNh89Z3erN51JF1UcaRo96_NdzLZ6Fj20&amp;t=3fff4fa7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhvQCXDFocIhTXzdDjDsn_stpq7ke85eF_RBU8e5kOxwPleaJb5yfoHmB6jovS8y7nAdrV_qhfwrd7jdjG71O8nhZMNgvycksSRPEgBsknQk4bDgzjA2&amp;t=3fff4fa7" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=uHIkleVeDJf4xS50Krz-yAC9I4IZVfbBKDJgn_YhdRk4ZqncLvtwi5XB4Fnak6oVOp22iM0Gmi-atjQQEvf4KYokzwDGTFjUFtZEdNMNrqTwYrp3WM3NJEM9qDt-ba7WO25ECp1jRBnbwavrENPrEzi36zY1&amp;t=5d0a842b" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=Jw6tUGWnA15YEa3ai3FadI5pTY47PSQ9bcpuRf3zDvDKxMd0O5kZYZOxsoQ67BdPR_wb_E9i-XWZ8_lLfYQsyA9NN1V32zn5hjikNwcj86UyKTRiVG7673pujxQ3UwAiXIYJjYgQ-Th3mnhcXpeEvwKbO3M1&amp;t=5d0a842b" type="text/javascript"></script>
+<script src="/WebResource.axd?d=JoBkLzP19aTuxbWOhHobYkfFDOH5311CBooCQTXvXE6CKTudHRWFU0-eKFwz7HuA7jpAAw2&amp;t=638259254771233176" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1CBD49C8" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="BPqOaqR8YsGLIdZvAkwv7H0lIEqXr/G5yrru9a2CXaNxXQ5Gt/sdOTLp85+jm4BU+Yy2tZs7HAND7RWtKQYJCeJZM3jrJQw9SNtnFABYuuR8HybtUpQ0YrUC1Y5C2XBMbHkm7G+u+ARPMQHtkJK0m22BOMr0mmVMHIBYVWyekWcHM78ZimnpGK2guXM5Ff0OFe5Z4oa6ON56r4+DoXTPsCXyXkxJShUu8S45Cmu4TTzIJPqvcTf14fGzlFfdIshZ3fkFxQnOurWzNn0s14TCA3dACb03RambHcgKK54HV8INueFC+QXtPdNRdkmGhC8Mz97P1QtxS4kTahPpRwlWFqhc83DFQZZjees696taEwbY1pUdpDEo+pglt+ZGjl82vbhASWsdFED+seSVxiZ7wCM7n5EJ5gya/p0gtRpijqHvY3+deani8JUPcnob/LeqWUMxKloruGd2FzKLvzLZZZq2DeZgjXVQFfOEzzyOgDojiJVIZnF+QVXhuVCCP+H3Y6Lw+wSJhTDRiwfcyTgpkyqd7rcCteK6QzSVuj7yYiMdKMaQ" />
+</div>
+            <div class="container">
+                
+
+              
+                <div class="corpo-master">
+                    <div class="menu-lateral">
+                        
+<style type="text/css" media="screen">
+    @import url(/portal/css/menu.css?v=1.1)
+</style>
+
+<!--=================== menu lateral ambiente restrito - copie o css acima ============== -->
+<div class="menu" style="">
+    <div class="ambiente-restrito_r1_c1">
+        <div style=" width: 198px; height: 45px; border-width: 2px; background-color: #012759; color: white; border-radius: 3px; display: flex; justify-content: center; align-items: center; font-family: 'Arial', sans-serif; font-weight: bold;font-size: 15px;">
+            AMBIENTE RESTRITO
+        </div>
+        <div class="contents">
+            <!-- apenas adicione itens de menu como os abaixo 
+            <a href="#">Início</a> <a href="#">Alterar E-mail/ Senha</a> <a href="#">Histórico de Acessos</a> <a href="#">item1</a>
+            <a href="#">item2</a> <a href="#">item3</a> <a href="#">item3</a> <a href="#">item3</a><a href="#"> item3</a>
+            -->
+
+            <a href="#ctl00_wpMenuLateral_mnuRotinas_SkipLink"><img alt="Skip Navigation Links" src="/WebResource.axd?d=rKN1opQVoh180LaGjXZZkKDD6JvgBBazXlhBynIzllZ-J1nlQFeu25twd0-hgdGCQDuFJA2&amp;t=638259254771233176" width="0" height="0" style="border-width:0px;" /></a><table id="ctl00_wpMenuLateral_mnuRotinas" class="menu ctl00_wpMenuLateral_mnuRotinas_2" cellpadding="0" cellspacing="0" border="0">
+	<tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn0">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="inicio.aspx" style="border-style:none;font-size:1em;">Início</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn1">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="opcoes.aspx" style="border-style:none;font-size:1em;">Configurações do Perfil</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn2">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="regime.aspx" style="border-style:none;font-size:1em;">Opção Simples Nacional</a></td><td style="width:0;"><img src="/WebResource.axd?d=YAYach_zykzn7tRotFpEUiduXQdgA5JxU21-r6EDi5fdoAXnUU2fxbIYxtBRWA0eYk8P6rKiTeuro3ulMPfDFueC8fU1&amp;t=638259254771233176" alt="" style="border-style:none;vertical-align:middle;" /></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn3">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4 menuSelected1 ctl00_wpMenuLateral_mnuRotinas_9" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3 menuSelected1 ctl00_wpMenuLateral_mnuRotinas_8" href="nota.aspx" style="border-style:none;font-size:1em;">Emissão de NFS-e</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn4">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="aceite.aspx" style="border-style:none;font-size:1em;">Aceite/Rejeição de NFS-e</a></td><td style="width:0;"><img src="/WebResource.axd?d=YAYach_zykzn7tRotFpEUiduXQdgA5JxU21-r6EDi5fdoAXnUU2fxbIYxtBRWA0eYk8P6rKiTeuro3ulMPfDFueC8fU1&amp;t=638259254771233176" alt="" style="border-style:none;vertical-align:middle;" /></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn5">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="substituicao1.aspx" style="border-style:none;font-size:1em;">Substituição de NFS-e</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn6">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="ConsolidacaoNotas/gerarEncapsulamentoSUP.aspx" style="border-style:none;font-size:1em;">Emissão de NFS-e Consolidada</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn7">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="guias.aspx" style="border-style:none;font-size:1em;">Guias de Pagamento</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn8">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="consultas.aspx" style="border-style:none;font-size:1em;">Consulta de Notas</a></td><td style="width:0;"><img src="/WebResource.axd?d=YAYach_zykzn7tRotFpEUiduXQdgA5JxU21-r6EDi5fdoAXnUU2fxbIYxtBRWA0eYk8P6rKiTeuro3ulMPfDFueC8fU1&amp;t=638259254771233176" alt="" style="border-style:none;vertical-align:middle;" /></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn9">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="../creditos/resumoextrato.aspx" style="border-style:none;font-size:1em;">Meus Créditos</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn10">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="../creditos/informepj.aspx" style="border-style:none;font-size:1em;">Informe Rendimentos</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn11">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="tfe.aspx" style="border-style:none;font-size:1em;">Talão Fiscal Eletrônico</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn12">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="calendario.aspx" style="border-style:none;font-size:1em;">Calendário de Emissão</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn13">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="exportaarquivo.aspx" style="border-style:none;font-size:1em;">Exportação de NFS-e</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn14">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="importaarquivo.aspx" style="border-style:none;font-size:1em;">Envio de RPS em Lote</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn15">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="construcaocivil/registrarNFM.aspx" style="border-style:none;font-size:1em;">Apuração Construção Civil</a></td><td style="width:0;"><img src="/WebResource.axd?d=YAYach_zykzn7tRotFpEUiduXQdgA5JxU21-r6EDi5fdoAXnUU2fxbIYxtBRWA0eYk8P6rKiTeuro3ulMPfDFueC8fU1&amp;t=638259254771233176" alt="" style="border-style:none;vertical-align:middle;" /></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn16">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="v2/default.aspx#/contribuinte/gerenciamentousuario" style="border-style:none;font-size:1em;">Gerenciamento de Usuários</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn17">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="destinatario1.aspx" style="border-style:none;font-size:1em;">Mensagens Recebidas</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn18">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="ParcelamentoGuias.aspx" style="border-style:none;font-size:1em;">Gestão de Dívidas</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn19">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="notatomador.aspx?tipo=t" style="border-style:none;font-size:1em;">Emissão de NFTS</a></td><td style="width:0;"><img src="/WebResource.axd?d=YAYach_zykzn7tRotFpEUiduXQdgA5JxU21-r6EDi5fdoAXnUU2fxbIYxtBRWA0eYk8P6rKiTeuro3ulMPfDFueC8fU1&amp;t=638259254771233176" alt="" style="border-style:none;vertical-align:middle;" /></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn20">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="substituicao2.aspx?tipo=t" style="border-style:none;font-size:1em;">Substituição de NFTS</a></td><td style="width:0;"><img src="/WebResource.axd?d=YAYach_zykzn7tRotFpEUiduXQdgA5JxU21-r6EDi5fdoAXnUU2fxbIYxtBRWA0eYk8P6rKiTeuro3ulMPfDFueC8fU1&amp;t=638259254771233176" alt="" style="border-style:none;vertical-align:middle;" /></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn21">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="ImportaArquivoNFTS.aspx" style="border-style:none;font-size:1em;">Envio de NFTS em Lote</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn22">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="exportaarquivoNFTS.aspx" style="border-style:none;font-size:1em;">Exportação de NFTS</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn23">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="../reclamacao/contribuinte/Consulta.aspx" style="border-style:none;font-size:1em;">Reclamações/Denúncias</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn24">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="DeclaraCupom.aspx" style="border-style:none;font-size:1em;">Declaração de Cupons</a></td>
+			</tr>
+		</table></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn25">
+		<td><table class="menuItem1 ctl00_wpMenuLateral_mnuRotinas_4" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 menuItem1 ctl00_wpMenuLateral_mnuRotinas_3" href="consultascupons.aspx" style="border-style:none;font-size:1em;">Consulta de Cupons</a></td>
+			</tr>
+		</table></td>
+	</tr>
+</table><div id="ctl00_wpMenuLateral_mnuRotinasn2Items" class="ctl00_wpMenuLateral_mnuRotinas_0 submenu ctl00_wpMenuLateral_mnuRotinas_7">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn26">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="regime.aspx" style="border-style:none;font-size:1em;">Alteração de Regime</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn27">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="acertofiscal.aspx" style="border-style:none;font-size:1em;">Enq./Desenq. Retroativo</a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn2ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=flfovlppGN8ii6uRlKVZOuwS04MHZ5U9PkVXgV-1zHSSCtB-MQkLXEAHEOOqeaP9qVeEk45lSFPe1bGlXPHW1NCFpU41&amp;t=638259254771233176" alt="" />
+	</div><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn2ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=q5MZef8MLXrgpV2VtG7gXQZERSIdhFaRiFD7HEDOwDMDijuGZlF8ASNE_n0mWzF5M5OLTm4_bveEeDeYNtcpSBVYndk1&amp;t=638259254771233176" alt="" />
+	</div>
+</div><div id="ctl00_wpMenuLateral_mnuRotinasn4Items" class="ctl00_wpMenuLateral_mnuRotinas_0 submenu ctl00_wpMenuLateral_mnuRotinas_7">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn28">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="aceite.aspx" style="border-style:none;font-size:1em;">Aceite</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn29">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="aceiteRejeicao.aspx" style="border-style:none;font-size:1em;">Rejeição/Alteração</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn30">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="aceiteManifestacao.aspx" style="border-style:none;font-size:1em;">Manifestação do Prestador</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn31">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="aceiteConsulta.aspx" style="border-style:none;font-size:1em;">Consulta</a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn4ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=flfovlppGN8ii6uRlKVZOuwS04MHZ5U9PkVXgV-1zHSSCtB-MQkLXEAHEOOqeaP9qVeEk45lSFPe1bGlXPHW1NCFpU41&amp;t=638259254771233176" alt="" />
+	</div><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn4ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=q5MZef8MLXrgpV2VtG7gXQZERSIdhFaRiFD7HEDOwDMDijuGZlF8ASNE_n0mWzF5M5OLTm4_bveEeDeYNtcpSBVYndk1&amp;t=638259254771233176" alt="" />
+	</div>
+</div><div id="ctl00_wpMenuLateral_mnuRotinasn8Items" class="ctl00_wpMenuLateral_mnuRotinas_0 submenu ctl00_wpMenuLateral_mnuRotinas_7">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn32">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="consultas.aspx" style="border-style:none;font-size:1em;">Consulta de NFS-e</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn33">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="consultasnfts.aspx" style="border-style:none;font-size:1em;">Consulta de NFTS</a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn8ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=flfovlppGN8ii6uRlKVZOuwS04MHZ5U9PkVXgV-1zHSSCtB-MQkLXEAHEOOqeaP9qVeEk45lSFPe1bGlXPHW1NCFpU41&amp;t=638259254771233176" alt="" />
+	</div><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn8ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=q5MZef8MLXrgpV2VtG7gXQZERSIdhFaRiFD7HEDOwDMDijuGZlF8ASNE_n0mWzF5M5OLTm4_bveEeDeYNtcpSBVYndk1&amp;t=638259254771233176" alt="" />
+	</div>
+</div><div id="ctl00_wpMenuLateral_mnuRotinasn15Items" class="ctl00_wpMenuLateral_mnuRotinas_0 submenu ctl00_wpMenuLateral_mnuRotinas_7">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn34">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="construcaocivil/registrarNFM.aspx" style="border-style:none;font-size:1em;">Registro materiais dedutíveis (RMD)</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn35">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="construcaocivil/consultarNFM.aspx" style="border-style:none;font-size:1em;">Consulta de RMD</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn36">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="construcaocivil/gerarEncapsulamento.aspx" style="border-style:none;font-size:1em;">Criação e edição de encapsulamento</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn37">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="construcaocivil/repositorioDeducoes.aspx" style="border-style:none;font-size:1em;">Consulta deduções</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn38">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="construcaocivil/encapsulamentos.aspx" style="border-style:none;font-size:1em;">Consulta de encapsulamentos</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn39">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="construcaocivil/consultarNotasDeducoes.aspx" style="border-style:none;font-size:1em;">Empreitadas e deduções encapsuladas</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn40">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="construcaocivil/consultarNotasDeducoes.aspx?tipo=n" style="border-style:none;font-size:1em;">NFS-e, NFTS e RMD não dedutíveis</a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn15ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=flfovlppGN8ii6uRlKVZOuwS04MHZ5U9PkVXgV-1zHSSCtB-MQkLXEAHEOOqeaP9qVeEk45lSFPe1bGlXPHW1NCFpU41&amp;t=638259254771233176" alt="" />
+	</div><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn15ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=q5MZef8MLXrgpV2VtG7gXQZERSIdhFaRiFD7HEDOwDMDijuGZlF8ASNE_n0mWzF5M5OLTm4_bveEeDeYNtcpSBVYndk1&amp;t=638259254771233176" alt="" />
+	</div>
+</div><div id="ctl00_wpMenuLateral_mnuRotinasn19Items" class="ctl00_wpMenuLateral_mnuRotinas_0 submenu ctl00_wpMenuLateral_mnuRotinas_7">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn41">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="notatomador.aspx?tipo=t" style="border-style:none;font-size:1em;">Serviço tomado</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn42">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="notaintermediario.aspx?tipo=i" style="border-style:none;font-size:1em;">Serviço intermediado</a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn19ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=flfovlppGN8ii6uRlKVZOuwS04MHZ5U9PkVXgV-1zHSSCtB-MQkLXEAHEOOqeaP9qVeEk45lSFPe1bGlXPHW1NCFpU41&amp;t=638259254771233176" alt="" />
+	</div><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn19ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=q5MZef8MLXrgpV2VtG7gXQZERSIdhFaRiFD7HEDOwDMDijuGZlF8ASNE_n0mWzF5M5OLTm4_bveEeDeYNtcpSBVYndk1&amp;t=638259254771233176" alt="" />
+	</div>
+</div><div id="ctl00_wpMenuLateral_mnuRotinasn20Items" class="ctl00_wpMenuLateral_mnuRotinas_0 submenu ctl00_wpMenuLateral_mnuRotinas_7">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn43">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="substituicao2.aspx?tipo=t" style="border-style:none;font-size:1em;">Serviço tomado</a></td>
+				</tr>
+			</table></td>
+		</tr><tr onmouseover="Menu_HoverDynamic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(this)" id="ctl00_wpMenuLateral_mnuRotinasn44">
+			<td><table class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6" cellpadding="0" cellspacing="0" border="0" width="100%">
+				<tr>
+					<td style="white-space:nowrap;width:100%;"><a class="ctl00_wpMenuLateral_mnuRotinas_1 submenuItem ctl00_wpMenuLateral_mnuRotinas_5" href="substituicao3.aspx?tipo=i" style="border-style:none;font-size:1em;">Serviço intermediado</a></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn20ItemsUp" onmouseover="PopOut_Up(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=flfovlppGN8ii6uRlKVZOuwS04MHZ5U9PkVXgV-1zHSSCtB-MQkLXEAHEOOqeaP9qVeEk45lSFPe1bGlXPHW1NCFpU41&amp;t=638259254771233176" alt="" />
+	</div><div class="submenuItem ctl00_wpMenuLateral_mnuRotinas_6 ctl00_wpMenuLateral_mnuRotinas_0" id="ctl00_wpMenuLateral_mnuRotinasn20ItemsDn" onmouseover="PopOut_Down(this)" onmouseout="PopOut_Stop(this)" style="text-align:center;">
+		<img src="/WebResource.axd?d=q5MZef8MLXrgpV2VtG7gXQZERSIdhFaRiFD7HEDOwDMDijuGZlF8ASNE_n0mWzF5M5OLTm4_bveEeDeYNtcpSBVYndk1&amp;t=638259254771233176" alt="" />
+	</div>
+</div><a id="ctl00_wpMenuLateral_mnuRotinas_SkipLink"></a>
+            <!--            
+            <StaticMenuStyle CssClass="menu" />
+            <StaticMenuItemStyle CssClass="menuItem" />
+            <StaticSelectedStyle CssClass="menuSelected" BackColor="" />
+            <DynamicMenuStyle CssClass="submenu" />
+            <DynamicSelectedStyle CssClass="submenuSelected" />
+            <DynamicMenuItemStyle CssClass="submenuItem" />
+            -->
+        </div>
+        <div class="ambiente-restrito_r3_c1" style="height: 43px; display: block; border: 0px solid; margin-right: 6px; margin-top: -4px">&nbsp;</div>
+    </div>
+</div>
+
+<div style="background-color: #fff; height: 20px;"></div>
+
+
+<table id="ctl00_wpMenuLateral_Table_Cab" cellspacing="0" cellpadding="0" border="0">
+	<tr>
+		<td valign="top" align="left" class="" style="width: 181px; background-color: #fff">
+            <div id="ctl00_wpMenuLateral_Panel1" style="border-color:Silver;border-width:0px;width:180px;text-align:center;width:180px;">
+			
+                <a href="/shared/capa.aspx"></a>
+            
+		</div>
+
+            <!-- Here Was the Old Menu -->
+
+
+            <br />
+            <center>
+                
+
+                <br />
+
+            </center>
+        </td>
+		<td style="width: 10px;"></td>
+	</tr>
+</table>
+
+
+                    </div>
+
+                    <div class="corpo-pagina">
+                        
+    <script type="text/javascript" language="javascript">
+        jQuery(function ($) {
+            $("#ctl00_body_tbDiscriminacao").limit(1950, "#charCount");
+        });
+
+        history.go(1)
+        function LerAtividade(index, ler) {
+            var f = document.forms['aspnetForm'];
+            var ddlAtiv = f.ctl00$body$ddlAtividade;
+            var ddlAliq;
+            var tbAliq;
+            tbAliq = f.ctl00$body$tbAliquota;
+            ddlAliq = f.ctl00$body$ddlAliquota;
+            f.ctl00$body$bolAlterouAtvdItmd.value = "true";
+
+            // D6582            
+            $("#ctl00_body_tbServEncerradoCodigo").val("");
+            $("#ctl00_body_tbServEncerradoDescricao").val("");
+            LimpaServicoEncerrado();
+
+            if (ler == '1')
+                tbAliq.value = ddlAliq.options[index].value;
+
+            if (ddlAtiv.options[index].value == '-1') {
+                if (Page_ValidationActive)
+                    Page_ValidationActive = false;
+		                        
+                __doPostBack('ctl00$body$ddlAtividade','');
+            }
+            return true;
+        }
+
+        //DATARPS
+		
+
+        function VerificaIntermediario() {
+            var btnIntermed;
+            var f = document.forms['aspnetForm'];
+            btnIntermed = f.ctl00$body$btIntermediario;
+            f.ctl00$body$bolAlterouAtvdItmd.value = "true";
+            btnIntermed.click();
+        }
+
+        function escolherTomador(ddl) {
+            var f = document.forms['aspnetForm'];
+            var tbcpfcnpj = f.ctl00$body$tbCPFCNPJTomador;
+
+            if (ddl.selectedIndex == 0)
+                tbcpfcnpj.focus();
+            else
+                tbcpfcnpj.value = "";
+        }
+
+        function confirmacao(msg) {
+            if ((typeof Page_ClientValidate != 'function' || Page_ClientValidate()) && window.confirm(msg)) {
+                document.getElementById('ctl00_body_pnBotoes').style.display = 'none';
+                document.getElementById('ctl00_body_pnAguarde').style.display = 'inline';
+                return true;
+            }
+            else
+                return false
+        }
+
+        function notaSimplificada() {
+            var f = document.forms['aspnetForm'];
+            var tbcpfcnpj = f.ctl00$body$tbCPFCNPJTomador;
+            var ddlapelido = f.ctl00$body$ddlApelido;
+            
+
+            if ((tbcpfcnpj.value == '') && (ddlapelido.selectedIndex == 0)) {
+                if ((typeof Page_ClientValidate != 'function' || Page_ClientValidate()) && window.confirm('Atenção.\nNão foi informado o CPF/CNPJ do tomador de serviços. \nVocê deseja continuar?')) {
+                    return true
+                }
+                else {
+                    tbcpfcnpj.focus();
+                    return false
+                }
+            }
+
+            return true;
+        }
+
+        function MudaTributacao(mostra) {
+            var dtMsgImune = new Date(2016, 1, 7);
+            var dtHoje = new Date();
+
+            document.getElementById('lblMensagemID').style.display = 'none';
+
+            if (((mostra == '4' || mostra == 12) && dtHoje - dtMsgImune > 0))
+                ExibirModalMsg('event', 'Atenção!!!\nServiços isentos ou imunes estão sujeitos à fiscalização do Município de São Paulo.');
+            else
+                if (mostra == '3')
+                    ExibirModalMsg('event', 'Atenção!!!\nSelecione esta opção no caso de ação judicial em andamento, com suspensão da exigibilidade do crédito tributário.\nInforme no campo "Discriminação dos Serviços" o número do processo judicial na 1a. instância.');
+                else
+                    if (mostra == '4')
+                        ExibirModalMsg('event', 'Atenção!!!\nInformamos que, a partir de 01/01/2016, os contribuintes que não estiverem cadastrados no SDI não poderão emitir a Nota Fiscal de Serviços como imune. Faça sua declaração através do endereço eletrônico www.sdi.prefeitura.sp.gov.br.');
+                    else
+                        if (mostra === '5' || mostra === '2')
+                            ExibirModalMsg('event', 'Atenção:\na partir de 01/07/2021, os benefícios fiscais de isenção e isenção parcial deverão ser declarados previamente através do sistema de Gestão de Benefícios Fiscais &#8211; GBF. Para mais detalhes sobre emissão de NFS-e com isenções,  <a href="http://nfpaulistana.prefeitura.sp.gov.br/arquivos/informativo_gbf.pdf" target="_blank" style="color:red; text-decoration:underline;">clique aqui</a>.');
+            return true;
+        }
+
+        function travaTecla(key, tipo) {
+            if (key.keyCode == 9) // 9 é o código do TAB
+            {
+                var f = document.forms['aspnetForm'];
+                var bairro = f.ctl00$body$tbBairro;
+                bairro.focus();
+                return true;
+            }
+            else {
+                if (tipo == 1)
+                    alert('Digite o CEP para preencher o Estado');
+                else
+                    alert('Digite o CEP para preencher a Cidade');
+
+                return false;
+            }
+        }
+
+        function PegaCEP(campo) {
+            CallServer(campo.value, this);
+        }
+
+        function fillFieldsByCEP(endereco, context) {
+            var f = document.forms['aspnetForm'];
+            if (f.ctl00$body$tbCEP.value != '') {
+                if (endereco == '') {
+                    alert("CEP não encontrado");
+                    f.ctl00$body$tbEstado.value = "";
+                    f.ctl00$body$tbCidade.value = "";
+                    f.ctl00$body$tbBairro.value = "";
+                    f.ctl00$body$ddlTipoLogradouro.selectedIndex = 0;
+                    f.ctl00$body$tbLogradouro.value = "";
+                    f.ctl00$body$tbNumero.value = "";
+                    f.ctl00$body$tbComplemento.value = "";
+
+                }
+                else {
+                    var arr = endereco.split("|");
+                    f.ctl00$body$tbEstado.value = arr[0];
+                    f.ctl00$body$tbCidade.value = arr[1];
+                    f.ctl00$body$tbBairro.value = arr[2];
+                    f.ctl00$body$ddlTipoLogradouro.selectedIndex = arr[3];
+                    f.ctl00$body$tbLogradouro.value = arr[4];
+                    f.ctl00$body$tbNumero.value = arr[5];
+                    f.ctl00$body$tbComplemento.value = arr[6];
+                    if (f.ctl00$body$tbEstado.value == "")
+                        f.ctl00$body$tbEstado.focus();
+                    else {
+                        if (f.ctl00$body$tbCidade.value == '')
+                            f.ctl00$body$tbCidade.focus();
+                        else {
+                            if (f.ctl00$body$tbBairro.value == '')
+                                f.ctl00$body$tbBairro.focus();
+                            else {
+                                if (f.ctl00$body$ddlTipoLogradouro.selectedIndex == 0)
+                                    f.ctl00$body$ddlTipoLogradouro.focus();
+                                else {
+                                    if (f.ctl00$body$tbLogradouro.value == '')
+                                        f.ctl00$body$tbLogradouro.focus();
+                                    else {
+                                        f.ctl00$body$tbNumero.focus();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        function VerificaCEI() {
+            var btnCEI;
+            var f = document.forms['aspnetForm'];
+            btnCEI = f.ctl00$body$btCEI;
+            btnCEI.click();
+        }
+        // PPCZ
+        //function BuscaServico(){
+        //    var btnServico;
+	    //    var f = document.forms['aspnetForm'];
+		//    btnServico = f.ctl00$body$btnServEncerradoSelecionar;
+        //    btnServico.click();             
+        //}
+
+        function LimpaServicoEncerrado() {
+            var btnServicoLimpar;
+            var f = document.forms['aspnetForm'];
+            btnServicoLimpar = f.ctl00$body$btnServEncerradoLimpar;
+            btnServicoLimpar.click();
+            return false;
+        }
+        // PPCZ
+
+        function ExibirModalMsg(event, msg) {
+            jQuery(".modal").fadeIn(300);
+            jQuery("#addSugestao").show();
+            jQuery("#motivo").html(msg);
+        }
+
+        jQuery(document).ready(function (event, msg) {
+            jQuery(".closeModal").click(function () {
+                jQuery(".modal").fadeOut(300);
+                jQuery(".overlay").fadeOut(300);
+            });
+        });
+    </script>
+    
+    <div style="color: #2f4f4f; font-family: Verdana; text-align: center;">
+        <span class="H1ComSC">Nota Fiscal de Serviços Eletrônica</span><span class="H1SemSC">
+            - NFS-e</span>
+        <br />
+        <br />
+        <span class="H1ComSC">IMPOSTO SOBRE SERVIÇOS </span><span class="H1SemSC">(ISS)</span>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$body$ScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        <br />
+        <strong>
+            <span id="ctl00_body_lblMostraTituloEmitidoEm" class="H1ComSC" style="font-size:Smaller;">Data da Prestação do Serviço: </span>
+            <span id="ctl00_body_lblMostraEmitidoEm" class="H1ComSC" style="font-size:Smaller;">23/09/2026</span>
+        </strong>
+        <br />
+    </div>
+    <div id="ctl00_body_pnComMenu" style="width:100%;text-align:center;width:100%;">
+	
+        
+    
+</div>
+    <br />
+    <div id="ctl00_body_pnInicio" style="width:550px;text-align:center;width:100%;">
+	
+        <table class="table" id="Table2" cellspacing="1" cellpadding="1" align="center" width="100%"
+            border="0">
+            <tr>
+                <td align="center" style="text-align: center;">
+                    <div id="ctl00_body_vSummary" class="errorSummary" style="width:100%;width:100%;display:none;">
+
+	</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tableHeader" style="text-align: center; height: 26px;">PRESTADOR DE SERVIÇOS
+                </td>
+            </tr>
+            <tr>
+                <td class="tableItem" style="text-align: center; vertical-align: middle; height: 20px; padding-bottom: 10px;">
+                    <select name="ctl00$body$ddlPrestador" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$body$ddlPrestador\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_body_ddlPrestador" disabled="disabled" class="textbox" style="width:100%;width:100%;">
+		<option value="">Selecione o contribuinte desejado...</option>
+		<option selected="selected" value="74319531">7.431.953-1 - CAIO VITALE BARBOSA 46033880803</option>
+
+	</select>
+                    <span id="ctl00_body_rfvPrestador" class="error" style="display:inline-block;color:Red;width:100%;width:100%;display:none;">Nenhum prestador foi selecionado</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="tableItem" style="text-align: center;">
+                    <div id="ctl00_body_pnTributacao" style="border-width:0px;width:100%;width:100%;">
+		
+                        <table class="table" id="Table8" cellspacing="0" cellpadding="0" width="100%" border="0">
+                            <tr>
+                                <td class="tableHeader" align="center" style="text-align: center; height: 26px;">LOCAL DE INCIDÊNCIA
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableItem" style="text-align: center; padding-top: 5px; padding-bottom: 10px;">
+                                    <input id="ctl00_body_rbNoMunicipio" type="radio" name="ctl00$body$LocalIncidencia" value="rbNoMunicipio" checked="checked" onclick="MudaTributacao(&#39;0&#39;);" /><label for="ctl00_body_rbNoMunicipio"> Tributado em São Paulo</label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input id="ctl00_body_rbForaMunicipio" type="radio" name="ctl00$body$LocalIncidencia" value="rbForaMunicipio" onclick="MudaTributacao(&#39;1&#39;);setTimeout(&#39;__doPostBack(\&#39;ctl00$body$rbForaMunicipio\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_body_rbForaMunicipio"> Tributado fora de São Paulo</label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input id="ctl00_body_rbExportacao" type="radio" name="ctl00$body$LocalIncidencia" value="rbExportacao" onclick="MudaTributacao(&#39;0&#39;);setTimeout(&#39;__doPostBack(\&#39;ctl00$body$rbExportacao\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_body_rbExportacao"> Exportação de serviços</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableItem" style="text-align: center; padding-top: 0px; padding-bottom: 10px;">
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableHeader" align="center" style="text-align: center; height: 26px;">NATUREZA DA OPERAÇÃO
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tableItem" style="text-align: center; padding-top: 5px; padding-bottom: 10px;">
+                                    <input id="ctl00_body_rbNormal" type="radio" name="ctl00$body$Tributacao" value="rbNormal" checked="checked" onclick="MudaTributacao(&#39;0&#39;);" /><label for="ctl00_body_rbNormal"> Normal</label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input id="ctl00_body_rbImune" type="radio" name="ctl00$body$Tributacao" value="rbImune" onclick="MudaTributacao(&#39;4&#39;);" /><label for="ctl00_body_rbImune"> Imunidade subjetiva</label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input id="ctl00_body_rbImuneObj" type="radio" name="ctl00$body$Tributacao" value="rbImuneObj" onclick="MudaTributacao(&#39;12&#39;);" /><label for="ctl00_body_rbImuneObj"> Imunidade objetiva</label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input id="ctl00_body_rbIsenta" type="radio" name="ctl00$body$Tributacao" value="rbIsenta" onclick="MudaTributacao(&#39;2&#39;);" /><label for="ctl00_body_rbIsenta"> Isenção</label>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input id="ctl00_body_rbIsentaParcial" type="radio" name="ctl00$body$Tributacao" value="rbIsentaParcial" onclick="MudaTributacao(&#39;5&#39;);" /><label for="ctl00_body_rbIsentaParcial"> Isenção (parcial)</label>
+                                    <a tabindex="-1"
+                                        href="javascript:alert('Esta opção somente está disponível para serviços tributados no Município de São Paulo. Marque esta opção caso a lei que tenha concedido isenção ao serviço (ou ao prestador) aponte a obrigatoriedade de observação da alíquota efetiva mínima, descrita no Art. 8º A, § 1º, da Lei Complementar 116, de 31 de julho de 2003.')"
+                                        style="font-weight: normal">(?)</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input id="ctl00_body_rbLiminar" type="radio" name="ctl00$body$Tributacao" value="rbLiminar" onclick="MudaTributacao(&#39;3&#39;);" /><label for="ctl00_body_rbLiminar"> Suspenso / decisão judicial</label>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    
+	</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tableHeader" style="text-align: center; height: 26px;">TOMADOR DE SERVIÇOS<br />
+                    
+                    
+                    
+                </td>
+            </tr>
+        </table>
+    
+</div>
+    <div id="ctl00_body_pnIdentificacao" style="width:100%;width:100%;">
+	
+        <table class="table" id="Table3" cellspacing="1" cellpadding="1" width="100%" border="0">
+            <tr>
+                <td class="tableItem" style="text-align: center; vertical-align: middle; height: 20px; padding-bottom: 10px;"
+                    colspan="2">Preencha <strong>APENAS UM</strong> dos dois campos a seguir e clique em AVANÇAR
+                    <span id="ctl00_body_cvTomador" class="error" style="display:inline-block;color:Red;width:100%;width:100%;display:none;"></span>
+                </td>
+            </tr>
+            <tr align="left">
+                <td class="tableItem" style="width: 50%; height: 50px; text-align: right; vertical-align: top; padding-right: 5px;">
+                    <strong>APELIDO:</strong><br />
+                    <a tabindex="-1" href="javascript:alert('O Apelido é um nome que você pode criar ao emitir uma nota fiscal para identificar mais rapidamente seus principais tomadores de serviços. Caso tenha criado algum apelido para seus tomadores, você poderá selecioná-lo na lista ao lado em vez de informar o CPF/CNPJ.')"
+                        style="font-weight: normal">(Saiba mais)</a>
+                </td>
+                <td class="tableItem" style="width: 50%; height: 50px; vertical-align: top;">
+                    <select name="ctl00$body$ddlApelido" id="ctl00_body_ddlApelido" class="textbox" onchange="javascript:escolherTomador(this);" style="width:144px;width:144px;">
+		<option value=""></option>
+
+	</select>
+                    <input type="button" name="ctl00$body$btExcluir" value="Excluir" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$btExcluir&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="ctl00_body_btExcluir" class="button" style="width:50px;width:50px;" />
+                </td>
+            </tr>
+            <tr align="left">
+                <td class="tableItem" style="width: 50%; height: 40px; text-align: right; vertical-align: top; padding-right: 5px;">
+                    <strong>CPF/CNPJ:</strong>
+                </td>
+                <td class="tableItem" valign="top" style="width: 50%; height: 40px;">
+                   <input name="ctl00$body$tbCPFCNPJTomador" type="text" maxlength="18" size="20" id="ctl00_body_tbCPFCNPJTomador" class="textbox" onfocus="this.select();" oninput="CNPJCPFMsk(this);" onblur="validaCpfCnpj(ctl00_body_cvCPFCNPJ,this.value)" style="width:140px;width:140px;" />
+                    <br />
+                    <span id="ctl00_body_cvCPFCNPJ" class="error" style="display:inline-block;color:Red;width:100%;width:100%;display:none;">CPF/CNPJ Inválido</span>
+                    <span id="ctl00_body_cvCPFCNPJ2" class="error" style="display:inline-block;color:Red;width:100%;width:100%;display:none;">O Prestador não pode emitir notas fiscais para si mesmo</span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="tableItem">
+                    
+                </td>
+            </tr>
+            <tr align="left">
+                <td colspan="2" class="tableItem" style="height: 6px" valign="top" align="center">
+                    <span id="lblMensagemID">
+                        </span>
+                </td>
+            </tr>
+        </table>
+    
+</div>
+
+    <div id="ctl00_body_pnlDataPrestacao" style="width:100%;width:100%;">
+	
+        <table class="table" id="tblDataPrestacao" cellspacing="1" cellpadding="1" width="100%" border="0">
+            <tr>
+                <td class="tableHeader" style="text-align: center; height: 26px; width: 70%">DATA DA PRESTAÇÃO DO SERVIÇO<br />
+
+                </td>
+                <td class="tableHeader" style="text-align: center; height: 26px; width: 30%">VERSÂO<br />
+                </td>
+            </tr>
+
+            <tr>
+                <td class="tableItem">
+                    <div class="col-data">
+                        <input name="ctl00$body$txtEmitidoEm" type="text" value="23/09/2026" maxlength="10" size="15" id="ctl00_body_txtEmitidoEm" class="textbox" onkeypress="return NumbersOnly(event);" onkeydown="stopMsk(event);" onfocus="this.select();" onblur="isData(this);" onkeyup="dateMsk(this);" style="width:100px;width:100px;" />
+                        
+                    </div>
+                </td>
+
+                <td class="tableItem">
+                    <div class="col-versao">
+                        <div class="radio-container">
+                            <div class="radio-row">
+                                <input id="ctl00_body_rbVersao1" type="radio" name="ctl00$body$Versao" value="rbVersao1" checked="checked" /><label for="ctl00_body_rbVersao1"> Versão 1 - ISS apenas</label>
+                            </div>
+                            <div class="radio-row">
+                                <input id="ctl00_body_rbVersao2" type="radio" name="ctl00$body$Versao" value="rbVersao2" /><label for="ctl00_body_rbVersao2"> Versão 2 - ISS e IBS</label>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tableItem" colspan="2">
+                    <div class="col-data" style="height: 30px; text-align: center;">
+                        <span id="ctl00_body_rfvDataEmissao" class="error" style="display:inline-block;color:Red;width:100%;width:100%;display:none;">Preencher a data de prestação de serviço</span>
+
+                        <span id="ctl00_body_cvDataEmissao" class="error" style="display:inline-block;color:Red;width:100%;width:100%;display:none;">*</span>
+
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+    
+</div>
+
+    <table id="Table1" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+        <tr>
+            <td style="width: 95%; text-align: center; vertical-align: top;">
+                
+                
+                <br />
+                <br />
+                <div id="ctl00_body_pnBotoes" style="width:100%;text-align:center;width:100%;">
+	
+                    &nbsp; &nbsp;&nbsp;
+                    
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<input type="submit" name="ctl00$body$btAvancar" value="AVANÇAR >>" onclick="if (! notaSimplificada()) return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$btAvancar&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_body_btAvancar" class="button" style="width:89px;width:89px;" />
+                    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="submit" name="ctl00$body$btEmitir" value="EMITIR >>" onclick="return confirmacao(&#39;Confirma a emissão desta Nota Fiscal?&#39;);WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$btEmitir&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_body_btEmitir" class="button" style="width:89px;width:89px;display:none;" />
+
+                    
+                    
+                
+</div>
+                
+            </td>
+        </tr>
+    </table>
+    <div class="modal sugestao">
+        <div class="closeModal">
+            X
+        </div>
+        <br />
+        <div class="clear">
+        </div>
+        <div id="addSugestao">
+            <p>
+                <span style="font-size: 10px;"></span>
+            </p>
+            <br />
+            <p id="motivo" style="color: #000">
+            </p>
+        </div>
+    </div>
+
+    <!-- Modal onde o Vue será renderizado -->
+    <div id="ibcCbsModal" class="modal-overlay">
+        <div id="modalContent" class="modal-content">
+            <div class="modal-header">
+                <span>Imposto e contribuição sobre bens e serviços (IBS e CBS)</span>
+                <button class="close-btn" onclick="executarFechar()">×</button>
+            </div>
+
+            <iframe id="iframeIbsCbs" src="../modules/ibs-cbs/index.html"></iframe>
+        </div>
+    </div>
+    <input type="hidden" name="ctl00$body$hdnIbsCbs" id="ctl00_body_hdnIbsCbs" />
+    <input type="hidden" name="ctl00$body$hdnEmitirIbsCbs" id="ctl00_body_hdnEmitirIbsCbs" />
+
+
+    <script type="text/javascript" src="../ibsCbs.js"></script>
+    <script type="text/javascript" language="javascript">
+        const txtDataFatoGerador = document.getElementById("ctl00_body_txtEmitidoEm");
+        const rbVersao1 = document.getElementById("ctl00_body_rbVersao1");
+        const rbVersao2 = document.getElementById("ctl00_body_rbVersao2");
+        const hdnIbsCbs = document.getElementById('ctl00_body_hdnIbsCbs');
+        const hdnEmitirIbsCbs = document.getElementById('ctl00_body_hdnEmitirIbsCbs');
+        const btEmitir = document.getElementById('ctl00_body_btEmitir');
+        const ckNaoVisualizar = document.getElementById('ctl00_body_ckNaoVisualizar');
+
+        if (txtDataFatoGerador != null) {
+            txtDataFatoGerador.addEventListener("keyup", validarData);
+            txtDataFatoGerador.addEventListener("blur", validarData);
+        }
+    </script>
+    <script type="text/javascript" language="javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('[data-msg]').forEach(function (el) {
+                el.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    alert(el.getAttribute('data-msg'));
+                });
+            });
+        });
+    </script>
+
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+                <div id="foot">
+                    
+<style type="text/css">
+    .style1 {
+        width: 171px;
+    }
+
+    .fira2 {
+        font-family: 'Fira Sans' !important;
+        font-style: normal;
+        font-weight: 300;
+    }
+</style>
+<table class="footerPortal">
+    <tr>
+        <td style="vertical-align: top; text-align: left; width: 15%; padding-left: 10px" class="style1">
+            <a href="http://www.capital.sp.gov.br">
+                <img src="../portal/images/LogoPrefRodape.png" id="ctl00_fot_LogoPrefRodape" alt="LogoPrefRodape" border="0" style="width: 143px;" /></a>
+        </td>
+        <td class="fira">
+            Secretaria Municipal da Fazenda<br />
+            Rua Líbero Badaró, 190, Centro - CEP: 01008-000
+            <br />
+            <img src="/portal/images/e-mail.svg" alt="Email" style="vertical-align: middle; width: 16px; margin-right: 5px;" />
+            <a href="https://sp156.prefeitura.sp.gov.br/portal/servicos/informacao?servico=3383">Fale com a Fazenda</a><br />
+            <img src="/portal/images/telefone.svg" alt="Telefone" style="vertical-align: middle; width: 16px; margin-right: 5px;" />
+            156
+        </td>
+        <td style="vertical-align: bottom; text-align: center; vertical-align: middle; width: 25%;">
+            
+        </td>
+        <td style="vertical-align: middle; text-align: right; width: 25%;">
+            
+        </td>
+    </tr>
+</table>
+
+                </div>
+
+            </div>
+        
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_body_vSummary"));
+var Page_Validators =  new Array(document.getElementById("ctl00_body_rfvPrestador"), document.getElementById("ctl00_body_cvTomador"), document.getElementById("ctl00_body_cvCPFCNPJ"), document.getElementById("ctl00_body_cvCPFCNPJ2"), document.getElementById("ctl00_body_rfvDataEmissao"), document.getElementById("ctl00_body_cvDataEmissao"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_body_vSummary = document.all ? document.all["ctl00_body_vSummary"] : document.getElementById("ctl00_body_vSummary");
+ctl00_body_vSummary.headertext = "ATENÇÃO! Corrija os seguintes erros:";
+ctl00_body_vSummary.displaymode = "List";
+var ctl00_body_rfvPrestador = document.all ? document.all["ctl00_body_rfvPrestador"] : document.getElementById("ctl00_body_rfvPrestador");
+ctl00_body_rfvPrestador.controltovalidate = "ctl00_body_ddlPrestador";
+ctl00_body_rfvPrestador.focusOnError = "t";
+ctl00_body_rfvPrestador.errormessage = "Nenhum prestador foi selecionado";
+ctl00_body_rfvPrestador.display = "Dynamic";
+ctl00_body_rfvPrestador.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_body_rfvPrestador.initialvalue = "";
+var ctl00_body_cvTomador = document.all ? document.all["ctl00_body_cvTomador"] : document.getElementById("ctl00_body_cvTomador");
+ctl00_body_cvTomador.errormessage = "APENAS UM campo poderá ser preenchido";
+ctl00_body_cvTomador.display = "None";
+ctl00_body_cvTomador.evaluationfunction = "CustomValidatorEvaluateIsValid";
+var ctl00_body_cvCPFCNPJ = document.all ? document.all["ctl00_body_cvCPFCNPJ"] : document.getElementById("ctl00_body_cvCPFCNPJ");
+ctl00_body_cvCPFCNPJ.controltovalidate = "ctl00_body_tbCPFCNPJTomador";
+ctl00_body_cvCPFCNPJ.errormessage = "CPF/CNPJ Inválido";
+ctl00_body_cvCPFCNPJ.display = "Dynamic";
+ctl00_body_cvCPFCNPJ.evaluationfunction = "CustomValidatorEvaluateIsValid";
+ctl00_body_cvCPFCNPJ.clientvalidationfunction = "validaCpfCnpj";
+var ctl00_body_cvCPFCNPJ2 = document.all ? document.all["ctl00_body_cvCPFCNPJ2"] : document.getElementById("ctl00_body_cvCPFCNPJ2");
+ctl00_body_cvCPFCNPJ2.controltovalidate = "ctl00_body_tbCPFCNPJTomador";
+ctl00_body_cvCPFCNPJ2.errormessage = "O Prestador não pode emitir notas fiscais para si mesmo";
+ctl00_body_cvCPFCNPJ2.display = "Dynamic";
+ctl00_body_cvCPFCNPJ2.evaluationfunction = "CustomValidatorEvaluateIsValid";
+var ctl00_body_rfvDataEmissao = document.all ? document.all["ctl00_body_rfvDataEmissao"] : document.getElementById("ctl00_body_rfvDataEmissao");
+ctl00_body_rfvDataEmissao.controltovalidate = "ctl00_body_txtEmitidoEm";
+ctl00_body_rfvDataEmissao.focusOnError = "t";
+ctl00_body_rfvDataEmissao.errormessage = "Preencher a data de prestação de serviço.";
+ctl00_body_rfvDataEmissao.display = "Dynamic";
+ctl00_body_rfvDataEmissao.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_body_rfvDataEmissao.initialvalue = "";
+var ctl00_body_cvDataEmissao = document.all ? document.all["ctl00_body_cvDataEmissao"] : document.getElementById("ctl00_body_cvDataEmissao");
+ctl00_body_cvDataEmissao.controltovalidate = "ctl00_body_txtEmitidoEm";
+ctl00_body_cvDataEmissao.focusOnError = "t";
+ctl00_body_cvDataEmissao.errormessage = "*";
+ctl00_body_cvDataEmissao.display = "Dynamic";
+ctl00_body_cvDataEmissao.evaluationfunction = "CustomValidatorEvaluateIsValid";
+//]]>
+</script>
+
+<script type="module" crossorigin src="https://cav.prefeitura.sp.gov.br/cdn/cav-vue@0.0.1/index.js?k=918b27831207416eb75ea5ab585415f1"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdepsxVkM-4FDMXOkP91MLZFHh5ZNjWZrYBZuWQ0vls_3rpWK-w2&t=638259254771233176';
+WebForm_InitCallback();var inicioLayoutRTOnline = '2026-01-01';document.forms['aspnetForm'].ctl00$body$btAvancar.focus();var ctl00_wpMenuLateral_mnuRotinas_Data = new Object();
+ctl00_wpMenuLateral_mnuRotinas_Data.disappearAfter = 500;
+ctl00_wpMenuLateral_mnuRotinas_Data.horizontalOffset = 0;
+ctl00_wpMenuLateral_mnuRotinas_Data.verticalOffset = 0;
+ctl00_wpMenuLateral_mnuRotinas_Data.iframeUrl = '/WebResource.axd?d=beToSAE3vdsL1QUQUxjWdepsxVkM-4FDMXOkP91MLZFHh5ZNjWZrYBZuWQ0vls_3rpWK-w2&t=638259254771233176';
+
+(function(id) {
+    var e = document.getElementById(id);
+    if (e) {
+        e.dispose = function() {
+            Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+    }
+})('ctl00_body_vSummary');
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        WebForm_AutoFocus('ctl00_body_tbCPFCNPJTomador');
+document.getElementById('ctl00_body_rfvPrestador').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_body_rfvPrestador'));
+}
+
+document.getElementById('ctl00_body_cvTomador').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_body_cvTomador'));
+}
+
+document.getElementById('ctl00_body_cvCPFCNPJ').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_body_cvCPFCNPJ'));
+}
+
+document.getElementById('ctl00_body_cvCPFCNPJ2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_body_cvCPFCNPJ2'));
+}
+
+document.getElementById('ctl00_body_rfvDataEmissao').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_body_rfvDataEmissao'));
+}
+
+document.getElementById('ctl00_body_cvDataEmissao').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_body_cvDataEmissao'));
+}
+//]]>
+</script>
+</form>
+    </div>
+
+    
+
+</body>
+</html>

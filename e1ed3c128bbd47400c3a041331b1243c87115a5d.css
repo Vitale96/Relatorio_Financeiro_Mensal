@@ -1,0 +1,156 @@
+* {padding:0; margin:0;}
+
+#nfpaulistana {
+	background: #FFFFFF;
+	color: #333333;
+	float: left;
+	font: 11px tahoma,verdana,Arial;
+	width: 100%;
+	display: block;
+}
+
+#nfpaulistana #topo {
+	background: #FFF;
+}
+
+#nfpaulistana #logo {
+	float: left;
+	margin: 20px 0px 0px 20px;
+}
+
+#nfpaulistana #acesso .cpf {
+	width: 170px;
+	margin-bottom: 4px;
+	margin-left: 3px;
+	border: 1px solid #fff;
+}
+
+#nfpaulistana #acesso .senha {
+	width: 140px;
+	margin-left: 3px;
+	border: 1px solid #fff;
+}
+
+#nfpaulistana #acesso .btn {
+	border: 0;
+	font-size: 11px;
+	background: #156e09;
+	color: #FFFFFF;
+	height:19px;
+}
+
+#nfpaulistana #acesso a {
+	color: #fff;
+}
+
+#esqueci_senha {
+	float: right;
+	min-width: 205px;
+	display: block;
+	padding: 0px;
+}
+
+#esqueci_senha a {
+	color: #6ca1cd;
+}
+
+#certificado {
+	height: 16px;
+	background: #156e09 url(../img/seta.png) no-repeat right;
+	padding: 4px 20px 0px 6px;
+	margin-bottom: -10px;
+	float: right !important;
+	color: #333333;
+}
+
+#certificado a {
+	color: #a0bad0;
+}
+
+#certificado a:hover {
+	text-decoration: none;
+}
+
+h2 
+{
+	background: url(../img/user_icon.png) left no-repeat;
+	background-position: 40px;
+	font: 15px Arial,tahoma,verdana;
+	font-weight: bold;
+	text-transform: uppercase;
+	height:18px;
+	padding: 6px 0px 8px 20px;
+}
+
+.clear {
+	clear: both;
+}
+
+#nfpaulistana .erro {
+	border:1px solid red !important;
+	background-color:#FFFFE0;	
+}
+
+#nfpaulistana #acesso {
+	/*background: url(../images/bg_login.gif) left bottom;*/
+	background: #0f4807 url(../img/bg_login.png?v=1.1) no-repeat;
+	padding: 4px 0px 10px 10px;
+	float: right;
+	width: 266px;
+	height: 120px;
+}
+
+#nfpaulistana #acesso label {
+	width: 80px;
+	float: left;
+	text-align: right;
+	margin-top: 2px;
+}
+
+#subheader{
+    background-color:#FFFFFF;
+    width:100%;
+}
+
+#subheader #nfpaulistana{
+    background:none;
+    margin-top:1px;
+}
+
+#subheader .logo{
+    margin-top: 3px;
+}
+
+#subheader .logo-financas{
+	float:right; 
+	position:relative;
+	margin-top:0px; 
+	/*background: url(../img/logo_SecFin.png) no-repeat;*/
+	margin-left:0px;
+    width:133px;
+    height:50px;	
+}
+
+#subheader > .subheader-left{
+    float:left;
+    padding:15px;
+}
+
+#subheader > .subheader-right{
+    float:right;
+    width:285px;
+    height:136px;
+    padding:4px 0px 0px 17px;
+}
+
+#subheader > .subheader-right img, #subheader > .subheader-right > div{
+    float:right;
+}
+
+#subheader .login-panel {
+    top:56px;   
+}
+
+#subheader .login-contribuinte-panel {
+    top:-32px;   
+}
