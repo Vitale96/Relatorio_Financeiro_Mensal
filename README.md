@@ -264,3 +264,95 @@ Tamanho: 4.52 MB
 - As imagens são otimizadas (escala de cinza, redimensionamento, compressão JPEG) para manter o PDF em tamanho razoável.
 - O sistema suporta dois modos: **Nacional** (RD, moeda R$) e **Internacional** (moeda US$, com colunas adicionais de cotação).
 - A base de categorias aprendidas (`historico_categorias.json`) fica no mesmo diretório do notebook e é acumulativa entre execuções.
+
+---
+
+# Automação Playwright — `Gerar_NF_Playwright.ipynb`
+
+Notebook paralelo que automatiza duas tarefas no **Brave real** (perfil do usuário, janela visível, Playwright + playwright-stealth):
+
+1. **Emissão de NF-e** no portal da Prefeitura de SP (`nfe.prefeitura.sp.gov.br`)
+2. **Emissão de DAS** (Simples Nacional) no portal da Receita (`www8.receita.fazenda.gov.br`, app PGDAS-D), incluindo download do PDF
+
+Ambiente: `.venv` local (Python 3.12.4), Windows, Brave instalado com perfil padrão.
+
+## Estrutura das células (índice 0-based)
+
+| Célula | Conteúdo |
+|--------|----------|
+| 0 | `!pip install playwright playwright-stealth` (executar só na 1ª vez) |
+| 1 | Infraestrutura: `carregar_credenciais`, `criar_contexto` (launch do Brave com perfil real, stealth custom, HAR/gravacao), `salvar_storage`/`carregar_storage` (reuso de sessão), interações humanas (`digitar_humano`, `mouse_humano`, `click_humano`, `scroll_humano`), `caminho_pdf`, `verificar_brave` |
+| 2 | Fluxo NF-e: `emitir_nfe_sp()` — login pmspauth → emitir → baixar PDF |
+| 3 | Fluxo DAS completo: captcha helpers, `acessar_declaracao_pgdasd`, `preencher_declaracao_das`, `transmitir_e_baixar_das`, `emitir_das_simples()` |
+| 4 | `gravar_sessao_manual()` — abre o Brave para gravar uma sessão de login manualmente (contexto persistente + HAR) |
+| 5 | `descobrir_seletores_pgdasd()` / `capturar_pagina()` — inspeção de localizadores do PGDAS-D |
+| 6 | `inspecionar_pagina()` — dump rápido da página atual |
+| 7 | Diagnóstico A/B do hCaptcha (`diagnosticar_captcha`) — compara modos stealth `custom` / `lib-only` / `none` |
+| 8 | Utilitários de trace (`ler_trace_linhas`, `timeline_trace`) |
+
+## Credenciais — `credenciais.json`
+
+Arquivo **gitignored** (nunca versionar). Estrutura esperada na raiz do projeto:
+
+```json
+{
+  "nfe_sp": {
+    "cnpj_emissora": "…",
+    "senha": "…",
+    "cnpj_tomador": "…"
+  },
+  "das": {
+    "cnpj": "…",
+    "cpf_responsavel": "…",
+    "codigo_acesso": "…"
+  }
+}
+```
+
+- A célula 1 carrega via `carregar_credenciais()`; as células de fluxo usam `CREDENCIAIS["nfe_sp"][...]` / `CREDENCIAIS["das"][...]`.
+- O valor do salário/valor do DAS está hardcoded na variável `salario` (em centavos, ex.: `"833160"` = R$ 8.331,60) — ajustar antes de rodar.
+
+## Fluxo DAS (célula 3) — passo a passo
+
+1. Tenta reutilizar sessão gravada (`storage_state`); se válida, pula login + captcha.
+2. Login manual (CNPJ + CPF responsável + código de acesso) com **hCaptcha** — resolução manual via MessageBox nativo (o fluxo aguarda o token e pede OK).
+3. Entra em `/pgdasd2018.app/` → redireciona para `/Captcha` (2º hCaptcha independente do login).
+4. **Pós-`ProcessarCaptcha`**: verifica se a sessão realmente entrou no app; se o servidor recusar (URL ainda em `/Captcha` ou corpo contendo "Comportamento de Robô"/"Impedido por proteção"), refaz o captcha manualmente em loop de até 3 rodadas; se persistir, falha com `RuntimeError` claro.
+5. Preenche a Declaração Mensal (competência, valor), valida o valor na tela, transmite, gera e baixa o PDF para `OneDrive/Documentos/Trabalho/Despesas/AA-MM-Mes/DAS_AAAAmmdd_HHMMSS.pdf`.
+
+Localizadores do PGDAS-D ficam em `SELETORES_DAS` (por texto/nome acessível — o WebForms troca ids a cada postback). Ajustar com a célula de descoberta (célula 5) se o portal mudar.
+
+## Bloqueio "Comportamento de Robô" (Receita, 08:00–18:00)
+
+**O que é:** decisão **server-side** do portal da Receita. Durante o horário comercial, acessos classificados como robóticos recebem a página "Entrada - Captcha" com o alerta *"Impedido por proteção Captcha. Comportamento de Robô bloqueado no período de 08:00 às 18:00."* e exigem hCaptcha interativo. Após 18:00 a política relaxa. (Contexto: a Receita passou a usar desafio Captcha em e-CAC/Portal de Serviços desde jan/2026 para usuários bloqueados indevidamente.)
+
+**Diagnóstico feito (A/B, célula 7):** os modos `custom` (stealth próprio), `lib-only` (playwright-stealth) e `none` caíram todos no mesmo `challenge_visivel` — ou seja, o stealth de página não muda a decisão do servidor. O hCaptcha do PGDAS-D está em modo sempre-desafio.
+
+**O que funciona manualmente:** o usuário consegue passar manualmente no mesmo PC/IP — o bloqueio responde a sinais de automação, não ao IP.
+
+**Mitigações aplicadas:**
+
+- `chromium_sandbox=True` no `launch_persistent_context` — remove o flag `--no-sandbox` que o Playwright adiciona por padrão (disparava infobar "sinalizador de linha de comando não suportado" e era marcador visível de automação).
+- Flags removidas dos args (ambas disparavam o infobar de "sinalizador não suportado" no Chromium moderno e/ou eram redundantes):
+  - `--disable-infobars` (obsoleta no Chromium atual)
+  - `--disable-blink-features=AutomationControlled` (restrito a política corporativa; o `STEALTH_SCRIPTS` já apaga `navigator.webdriver` via `Object.defineProperty` no init script)
+- Stealth custom (`STEALTH_SCRIPTS`, modo `"custom"`, aplicado via `add_init_script`): apaga `webdriver`, fake plugins, coerência de hardware com o perfil real.
+- Interações humanas: `mouse_humano` (curva), `digitar_humano` (tecla a tecla), sleeps aleatórios.
+- Loop de re-chaptcha pós-`ProcessarCaptcha` (até 3 rodadas) — em vez de prosseguir cego após recusa do servidor.
+
+**Limitação aceita:** mesmo com captcha resolvido, o servidor pode recusar a sessão de dia. O fluxo agora trata isso explicitamente; se persistir, a orientação é rodar após 18h ou manualmente. Não há agendamento automático implementado (decisão de 20/10/2026: seguir sem).
+
+## Sessão de debug / HAR
+
+- `criar_contexto` aceita `sessao="..."` e grava em `har/sessao/<sessao>/` (HAR + anexos + vídeo das páginas).
+- Artefatos de sessão ficam em `har/` (gitignored). `*.har` também gitignored.
+- Para investigar um bloqueio: olhar o HTML anexado (página "Entrada - Captcha") e o `sessao.har` (status/URL de cada request).
+
+## Estado em 20/10/2026
+
+- NF-e: funcionando (PDF emitido com sucesso em teste).
+- Login DAS + reuso de sessão: funcionando (storage de 5 cookies reutilizado sem captcha).
+- Captcha da declaração PGDAS-D: resolução manual funciona; rejeição pós-captcha tratada com loop de 3 rodadas (**pendente validar em execução real após as correções**).
+- Download do PDF do DAS: código pronto (steps 5–7), **pendente validação ponta a ponta**.
+- `salario` hardcoded em `valor_em_centavos()` — lembrar de conferir a cada competência.
+- Alterações do notebook e `.gitignore` **não commitadas** nesta data (working tree: `.gitignore` e `Gerar_NF_Playwright.ipynb` modificados; ~660 arquivos-hash de sessão HAR já removidos do índice via `git rm --cached`, commit `ed2be01`).
